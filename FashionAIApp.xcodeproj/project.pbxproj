@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		55388B9F2DECE40D008A14DC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 55388B9E2DECE404008A14DC /* README.md */; };
+		55388BA12DECE426008A14DC /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 55388BA02DECE41B008A14DC /* .gitignore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		55388B822DECE163008A14DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		55388B712DECE15F008A14DC /* FashionAIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionAIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55388B812DECE163008A14DC /* FashionAIAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FashionAIAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55388B8B2DECE163008A14DC /* FashionAIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FashionAIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55388B9E2DECE404008A14DC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		55388BA02DECE41B008A14DC /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +82,8 @@
 		55388B682DECE15F008A14DC = {
 			isa = PBXGroup;
 			children = (
+				55388BA02DECE41B008A14DC /* .gitignore */,
+				55388B9E2DECE404008A14DC /* README.md */,
 				55388B732DECE15F008A14DC /* FashionAIApp */,
 				55388B842DECE163008A14DC /* FashionAIAppTests */,
 				55388B8E2DECE163008A14DC /* FashionAIAppUITests */,
@@ -212,6 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55388B9F2DECE40D008A14DC /* README.md in Resources */,
+				55388BA12DECE426008A14DC /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
