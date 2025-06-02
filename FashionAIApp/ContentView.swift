@@ -4,56 +4,39 @@
 //
 //  Created by Anela Trakic on 6/1/25.
 //
+//
+//import SwiftUI
+//import SwiftData
+//
 
 import SwiftUI
-import SwiftData
+import KeychainAccess
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
+    // Uses macOS Keychain to secure API key
+    var apiKey: String {
+        let keychain = Keychain(service: "openai_api_key")
+        return (try? keychain.get(NSUserName())) ?? ""
+    }
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        VStack {
+            Image(systemName: "globe").imageScale(.large).foregroundColor(.accentColor)
+            Text("Hello, world!")
+        }
+        .padding()
+        .onAppear {
+            Task {
+                let api = ChatGPTAPI(apiKey: apiKey)
+                do {
+                    let stream = try await api.sendMessageStream(text: "What is James Bond")
+                    for try await line in stream {
+                        print(line)
                     }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-            .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
-        } detail: {
-            Text("Select an item")
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
-    }
-}
-
-#Preview {
-    ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
