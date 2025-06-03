@@ -15,7 +15,7 @@ A simple macOS app built with SwiftUI that integrates OpenAI APIs to generate ou
 
 ## Resources used
 - [Build a SwiftUI ChatGPT iOS App | OpenAI API](https://www.youtube.com/watch?v=PLEgTCT20zU)
-- [SwiftUI: Build macOS App] (https://www.youtube.com/watch?v=6Qa-SspgRMM)
+- [SwiftUI: Build macOS App](https://www.youtube.com/watch?v=6Qa-SspgRMM)
 
 ## To Do
 - Implement functionality to save
