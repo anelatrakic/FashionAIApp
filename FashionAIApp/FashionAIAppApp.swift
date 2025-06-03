@@ -16,3 +16,7 @@ struct FashionAIAppApp: App {
         }
     }
 }
+
+#Preview {
+    ContentView()
+}

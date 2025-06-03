@@ -1,9 +1,3 @@
-//
-//  README.md
-//  FashionAIApp
-//
-//  Created by Anela Trakic on 6/1/25.
-//
 # FashionAIApp🩷​​✨​🛍️👗👛​​🫶​
 
 Idea: A macOS app built with SwiftUI that uses AI (LLMs) to generate outfit ideas, makeup suggestions, and more. I know this idea has already been implemented by other people, but this is just a fun project for me to get more familiar with AI and Swift! 
@@ -13,16 +7,18 @@ TBD (want to be able to generate outfit ideas (and potentially some other catego
 
 ## Tech Stack
 - Swift + SwiftUI
-- SwiftData (for local storage)
+- SwiftData (for local storage) - TODO
 - OpenAI API (LLM integration)
 - macOS native app (Xcode)
 
 ## Setup
 TBD
 
+## Resources used
+- 
+- https://www.youtube.com/watch?v=6Qa-SspgRMM
+
 ## To Do
-- Get familiar with Swift, SwiftUI, etc.
-- Figure out what LLM to use, how to integrate, etc. 
 - Think of potential designs and templates for app, and themes
 - Enable folder tagging?
 - Improve LLM prompt customization?
