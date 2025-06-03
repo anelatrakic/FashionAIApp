@@ -23,7 +23,7 @@ struct DotLoadingView: View {
             Circle()
                 .opacity(showCircle3 ? 1 : 0)
         }
-        .foregroundColor(.gray.opacity(0.5))
+        .foregroundColor(Color("Pink 2").opacity(0.5))
         .onAppear { performAnimation() }
     }
     

@@ -2,7 +2,6 @@
 //  ChatGPTAPI.swift
 //  FashionAIApp
 //
-//  Using this YouTube video: https://www.youtube.com/watch?v=PLEgTCT20zU
 //  Created by Anela Trakic on 6/1/25.
 //
 

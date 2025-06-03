@@ -14,16 +14,17 @@ struct MessageRowView: View {
     let retryCallback: (MessageRow) -> Void
     var body: some View {
         VStack(spacing: 0) {
-            messageRow(text: message.sendText, image: message.sendImage, bgColor: colorScheme == .light ? .white : Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 0.5))
+            messageRow(text: message.sendText, image: message.sendImage, bgColor: Color("Purple"))
             
-            Divider()
+            Divider().background(Color("Pink 1").opacity(0.4))
+
             messageRow(text: message.responseText,
                        image: message.responseImage,
-                       bgColor: Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 0.5),
+                       bgColor: Color("Pink 1").opacity(0.2),
                        responseError: message.responseError,
                        showDotLoading: message.isInteractingWithChatGPT)
-            Divider()
             
+            Divider().background(Color("Pink 1").opacity(0.4))
         }
     }
     
@@ -64,6 +65,7 @@ struct MessageRowView: View {
     }
 }
 
+// Preview used to look at code changes while developing
 struct MessageRowView_Previews: PreviewProvider {
     static let message = MessageRow(
         isInteractingWithChatGPT: true,
